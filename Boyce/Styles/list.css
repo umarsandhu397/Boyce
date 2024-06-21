@@ -1,0 +1,38 @@
+.list{
+    margin: 120px auto 0 auto;
+    max-width: 640px;
+    font-size: 48px;
+    line-height: 1.2;
+} 
+
+.list a{
+    text-transform: uppercase;
+}
+
+.list a::after{
+    content: '/';
+}
+.list a:last-child::after{
+    content: '';
+}
+
+.list a img{
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition: filter 2s ease-in;
+    
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    max-width: 500px;
+    border-radius: 5%;
+
+    pointer-events: none;
+}
+
+.list a:hover img{
+    opacity: 1;
+    filter: grayscale(100%);
+}
